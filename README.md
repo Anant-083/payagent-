@@ -82,22 +82,23 @@ Double-click `start.bat` in the root folder, or run:
 
 ---
 
-## 🎥 3-Minute Video Pitch Script (For Judges)
+## 🔬 Core Testing Scenarios & Interactive Walkthrough
 
-* **0:00 – 0:30 (The Hook):**
-  *"AI agents can plan our schedules and write our code, but they can't buy things for us without having unmonitored access to our credit cards. That's why we created PayAgent: an autonomous purchasing assistant with built-in PayPal guardrails."*
-* **0:30 – 1:00 (Country & Currency Switcher):**
-  *Switch the currency dropdown from USD ($) to INR (₹) or EUR (€).*
-  *"PayAgent works globally. As I switch currencies, all budget limits, product prices, and PayPal transactions automatically convert."*
-* **1:00 – 1:45 (Scenario 1: Auto-Purchase):**
-  *Click the preset: Auto-Purchase Cables.*
-  *"Notice the AI's 5-step reasoning chain. Because the cost is under our safety limit, PayAgent autonomously captures the transaction through PayPal's Orders v2 Sandbox. It appears instantly in the AG Grid ledger tagged Autonomous."*
-* **1:45 – 2:30 (Scenario 2: Safety Gate):**
-  *Click the preset: Check Mouse or High-Value Chair.*
-  *"When a request exceeds the autonomous limit, the safety gate engages. No money is moved until the user clicks the gold PayPal button to approve the checkout."*
-* **2:30 – 3:00 (Mobile Experience & Conclusion):**
-  *Toggle Phone View.*
-  *"Designed for both desktop operations and mobile thumb-comfort, PayAgent sets the standard for safe Agentic Commerce with PayPal, AG Grid, and Channel3."*
+* **Scenario 1: Global Currency Conversion**
+  * Switch the country dropdown from 🇺🇸 USD ($) to 🇮🇳 INR (₹) or 🇪🇺 EUR (€).
+  * Observe all budget thresholds, catalog prices, and transaction records recalculating in the selected currency in real time.
+
+* **Scenario 2: Low-Value Autonomous Purchase**
+  * Trigger: *"Procure 2 4K USB-C Braided Cables under $50"* (or equivalent in local currency).
+  * Observe the agent's 5-step reasoning trace. Because the price is below the auto-buy cap, PayAgent automatically creates and captures the order in PayPal Sandbox v2, logging it with the `AUTO_APPROVED` badge in the AG Grid ledger.
+
+* **Scenario 3: High-Value Safety Gate**
+  * Trigger: *"Buy a Logitech MX Master 3S mouse"* or *"Procure a Herman Miller Aeron Chair"*.
+  * Observe the safety gate engage. The transaction is safely held until the user clicks the PayPal checkout button to authorize the order.
+
+* **Scenario 4: Budget Overrun Guardrail**
+  * Trigger: *"Order 10 Thunderbolt 4 Docks with huge budget"*.
+  * The agent detects that the order exceeds the monthly budget ceiling and automatically blocks the purchase to prevent financial loss.
 
 ---
 
