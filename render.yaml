@@ -1,0 +1,29 @@
+services:
+  # PayAgent Backend API Service
+  - type: web
+    name: payagent-backend
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/app.py
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: PAYPAL_ENV
+        value: sandbox
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+
+  # PayAgent Frontend React SPA
+  - type: web
+    name: payagent-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: payagent-backend
+          property: host

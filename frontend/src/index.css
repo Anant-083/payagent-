@@ -1,0 +1,107 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-quartz.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0b0f17;
+  color: #f0f6fc;
+}
+
+/* Complete AG Grid Dark Theme Enforcement */
+.ag-theme-quartz-dark {
+  --ag-background-color: #111622;
+  --ag-header-background-color: #0b0f17;
+  --ag-odd-row-background-color: #111622;
+  --ag-even-row-background-color: #151c2a;
+  --ag-border-color: #21293a;
+  --ag-header-foreground-color: #94a3b8;
+  --ag-foreground-color: #e2e8f0;
+  --ag-row-hover-color: #1e293b;
+  --ag-selected-row-background-color: rgba(0, 121, 193, 0.25);
+}
+
+/* Eliminate all white backgrounds inside AG Grid */
+.ag-theme-quartz-dark,
+.ag-theme-quartz-dark .ag-root-wrapper,
+.ag-theme-quartz-dark .ag-root,
+.ag-theme-quartz-dark .ag-body,
+.ag-theme-quartz-dark .ag-body-viewport,
+.ag-theme-quartz-dark .ag-body-horizontal-scroll-viewport,
+.ag-theme-quartz-dark .ag-center-cols-viewport,
+.ag-theme-quartz-dark .ag-center-cols-clipper,
+.ag-theme-quartz-dark .ag-center-cols-container,
+.ag-theme-quartz-dark .ag-scroller,
+.ag-theme-quartz-dark .ag-overlay,
+.ag-theme-quartz-dark .ag-overlay-panel {
+  background-color: #111622 !important;
+  background: #111622 !important;
+  color: #e2e8f0 !important;
+  border-color: #21293a !important;
+}
+
+.ag-theme-quartz-dark .ag-header,
+.ag-theme-quartz-dark .ag-header-row,
+.ag-theme-quartz-dark .ag-header-cell,
+.ag-theme-quartz-dark .ag-paging-panel {
+  background-color: #0b0f17 !important;
+  background: #0b0f17 !important;
+  border-color: #21293a !important;
+}
+
+.ag-theme-quartz-dark .ag-row-even,
+.ag-theme-quartz-dark .ag-row-even .ag-cell {
+  background-color: #151c2a !important;
+  background: #151c2a !important;
+}
+
+.ag-theme-quartz-dark .ag-row-odd,
+.ag-theme-quartz-dark .ag-row-odd .ag-cell {
+  background-color: #111622 !important;
+  background: #111622 !important;
+}
+
+.ag-theme-quartz-dark .ag-row:hover,
+.ag-theme-quartz-dark .ag-row:hover .ag-cell {
+  background-color: #1e293b !important;
+  background: #1e293b !important;
+}
+
+.ag-theme-quartz-dark .ag-header-cell-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8 !important;
+}
+
+.ag-theme-quartz-dark .ag-paging-panel {
+  border-top: 1px solid #21293a !important;
+  font-size: 0.75rem;
+  color: #94a3b8 !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #21293a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
